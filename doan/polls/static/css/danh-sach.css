@@ -1,0 +1,82 @@
+.style-banner{
+    background: linear-gradient(-45deg, #e0cb0d 0, #e44d3a 100%);
+    height: 50px;
+}
+figure {
+	position: relative;
+	width: 300px;
+	height: 300px;
+	box-sizing: border-box;
+	display: inline-block;
+	margin: 0 auto;
+	background-color: rgba(230, 230, 230, 0.7);
+	color: #666;
+	transition: all 0.15s ease;
+	overflow: hidden;
+	backface-visibility: hidden;
+	box-shadow: 3px 2px 24px 0px rgba(190, 158, 167, 1);
+}
+figure p {
+	width: 320px;
+	background-color: rgba(255, 255, 255, 0.9);
+	border-bottom: 5px solid rgba(190, 158, 167, 0.4);
+	padding: 20px;
+	bottom: 5px;
+	position: absolute;
+	transition: all 0.2s ease;
+	font-weight: bold;
+}
+
+figure span{
+    text-overflow: ellipsis;
+}
+
+/***/
+
+figure figcaption {
+	transform: translateX(-120%);
+	background-color: rgba(255, 255, 255, 0.9);
+	height: 400px;
+	padding: 20px;
+	position: absolute;
+	top: 0px;
+	bottom: 0px;
+	left: 0px;
+	right: 0px;
+	font-size: 14px;
+	border: 15px solid rgba(190, 158, 167, 0.4);
+	transition: all 1.5s ease;
+}
+
+figure:hover figcaption {
+	transition: all 1s ease;
+	transform: translate(0, 0);
+}
+figure:hover p {
+	transform: translateX(-120%);
+}
+
+figure .giaSu {
+	text-align: right;
+	margin-top: 25px;
+}
+
+.card-top{
+    padding-top: 10px ;
+}
+
+.card-text{
+    color: red;
+    font-weight: bold;
+}
+
+.area{
+    color: darkblue;
+    font-weight: bold;
+}
+
+.subject{
+    color: black;
+    font-style: italic;
+    font-size: 16px;
+}

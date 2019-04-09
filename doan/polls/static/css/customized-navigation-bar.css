@@ -1,0 +1,23 @@
+.navbar{
+    height: 50px;
+}
+
+@media (max-width:575px)
+{
+    .navbar{
+        max-height:211px;
+    }
+}
+
+.btn-outline-light:hover{
+color:#e44d3a;
+}
+.btn-search{
+    color: #e44d3a;
+    background-color: #fff;
+}
+
+.btn-search:hover{
+    color: #fff;
+    background-color: #b23b2c;
+}
