@@ -1,4 +1,5 @@
-<!doctype html>
+{% load staticfiles %}
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <title>Trang Chủ</title>
@@ -15,30 +16,30 @@
           integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
 
     <!-- Customized Navigation Bar CSS  -->
-    <link rel="stylesheet" href="/static/css/customized-navigation-bar.css">
+    <link rel="stylesheet" href="{% static 'css/customized-navigation-bar.css'%}">
 
     <!-- Customized Footer CSS -->
-    <link rel="stylesheet" href="/static/css/customized-footer.css">
+    <link rel="stylesheet" href="{% static 'css/customized-footer.css'%}">
 
     <!-- Login + Signup CSS -->
-    <link rel="stylesheet" href="/static/css/login-signup.css">
+    <link rel="stylesheet" href="{% static 'css/login-signup.css'%}">
 
     <!-- Customized Carousel -->
-    <link rel="stylesheet" href="/static/css/customized-carousel.css">
+    <link rel="stylesheet" href="{% static 'css/customized-carousel.css'%}">
 
     <!-- Customized CSS -->
-    <link rel="stylesheet" href="/static/css/customized-bootstrap.css">
-    <link rel="stylesheet" href="/static/css/customized-owlcarousel.css">
+    <link rel="stylesheet" href="{% static 'css/customized-bootstrap.css'%}">
+    <link rel="stylesheet" href="{% static 'css/customized-owlcarousel.css'%}">
 
     <!-- Owl Carousel -->
-    <link rel="stylesheet" href="/static/css/owl.carousel.css">
-    <link rel="stylesheet" href="/static/css/owl.theme.default.min.css">
+    <link rel="stylesheet" href="{% static 'css/owl.carousel.css'%}">
+    <link rel="stylesheet" href="{% static 'css/owl.theme.default.min.css'%}">
 
     <!-- Ekko Lightbox (for Image Gallery) -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ekko-lightbox/5.3.0/ekko-lightbox.css">
 
     <!-- CSS for this Home Page -->
-    <link rel="stylesheet" href="/static/css/home-page.css">
+    <link rel="stylesheet" href="{% static 'css/home-page.css'%}">
 
 
 </head>
@@ -47,15 +48,13 @@
     <!-- BEGIN OF Navigation Bar -->
     <nav class="navbar navbar-expand-sm bg-original navbar-dark fixed-top">
         <!-- Web Logo -->
-        <a class="navbar-brand" href="homepage"><img src="/static/images/logo.png"></a>
-        <div class="input-group col-4">
-            <input type="text" class="form-control" placeholder="Nhập bất cứ thứ gì mà bạn muốn tìm...">
-            <div class="input-group-append">
-                <button class="btn btn-search" type="button">
-                    <i class="fas fa-search"></i>
-                </button>
-            </div>
-        </div>
+        <a class="navbar-brand" href="homepage"><img src="{% static 'images/logo.png'%}"></a>
+        <div class="search-bar">
+            <form>
+                <input type="text" name="search" placeholder="Nhập bất cứ thứ gì bạn muốn tìm...">
+                <button type="submit"><i class="fas fa-search"></i></button>
+            </form>
+        </div><!--search-bar end-->
 
         <!-- Toggler/collapsibe Button -->
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
@@ -248,7 +247,7 @@
 <div id="carouselHeader" class="carousel slide carousel-fade" data-ride="carousel">
     <div class="carousel-inner">
         <div class="carousel-item active">
-            <img class="d-block w-100" src="/static/images/slide1.jpg" alt="First slide">
+            <img class="d-block w-100" src="{% static 'images/slide1.jpg'%}" alt="First slide">
             <div class="carousel-caption d-none d-md-block">
                 <div class="row">
                     <div class="col-lg-6"></div>
@@ -262,21 +261,19 @@
         </div>
 
         <div class="carousel-item">
-            <img class="d-block w-100" src="/static/images/slide2.jpg" alt="Second slide">
+            <img class="d-block w-100" src="{% static 'images/slide2.jpg'%}" alt="Second slide">
             <div class="carousel-caption d-none d-md-block">
                 <div class="row">
                     <div class="col-lg-6"></div>
                     <div class="col-lg-6 text-center">
                         <h3>Khóa học bổ ích</h3>
                         <p>Mọi thứ đều trong tầm tay, hãy bắt lấy ngay!</p>
-                        <div class="input-group">
-                            <input type="text" class="form-control" placeholder="Bạn muốn học về lĩnh vực gì?">
-                            <div class="input-group-append">
-                                <button class="btn btn-primary" type="button">
-                                    <i class="fas fa-search"></i>
-                                </button>
-                            </div>
-                        </div>
+                        <div class="search-bar carousel-search">
+                            <form>
+                                <input type="text" name="search" placeholder="Hôm nay bạn muốn học điều gì...">
+                                <button type="submit"><i class="fas fa-search"></i></button>
+                            </form>
+                        </div><!--search-bar end-->
                     </div>
                 </div>
             </div>
@@ -360,7 +357,7 @@
                                     <div class="col-sm-12 col-lg-4">
                                         <div class="card" style="width: 300px; margin: auto;">
                                             <div class="container inner">
-                                                <img src="/static/images/course1.jpg" class="card-img-top">
+                                                <img src="{% static 'images/course1.jpg'%}" class="card-img-top">
                                             </div>
                                             <div class="card-body">
                                                 <h4 class="card-title">Khóa học TOEIC</h4>
@@ -374,7 +371,7 @@
                                     <div class="col-sm-12 col-lg-4" href="">
                                         <div class="card" style="width: 300px; margin: auto;">
                                             <div class="container inner">
-                                                <img src="/static/images/course2.jpg" class="card-img-top">
+                                                <img src="{% static 'images/course2.jpg'%}" class="card-img-top">
                                             </div>
                                             <div class="card-body">
                                                 <h4 class="card-title">Khóa học Kinh doanh trên Facebook</h4>
@@ -389,7 +386,7 @@
                                     <div class="col-sm-12 col-lg-4" href="">
                                         <div class="card" style="width: 300px; margin: auto;">
                                             <div class="container inner">
-                                                <img src="/static/images/course3.jpg" class="card-img-top">
+                                                <img src="{% static 'images/course3.jpg'%}" class="card-img-top">
                                             </div>
                                             <div class="card-body">
                                                 <h4 class="card-title">Khóa học lập trình Android</h4>
@@ -413,7 +410,7 @@
                                     <div class="col-sm-12 col-lg-4" href="">
                                         <div class="card" style="width: 300px; margin: auto;">
                                             <div class="container inner">
-                                                <img src="/static/images/course4.jpg" class="card-img-top">
+                                                <img src="{% static 'images/course4.jpg'%}" class="card-img-top">
                                             </div>
                                             <div class="card-body">
                                                 <h4 class="card-title">Khóa học hiệu ứng After Effect</h4>
@@ -428,7 +425,7 @@
                                     <div class="col-sm-12 col-lg-4" href="">
                                         <div class="card" style="width: 300px; margin: auto;">
                                             <div class="container inner">
-                                                <img src="/static/images/course5.jpg" class="card-img-top">
+                                                <img src="{% static 'images/course5.jpg'%}" class="card-img-top">
                                             </div>
                                             <div class="card-body">
                                                 <h4 class="card-title">Khóa học Sketch Design</h4>
@@ -442,7 +439,7 @@
                                     <div class="col-sm-12 col-lg-4" href="">
                                         <div class="card" style="width: 300px; margin: auto;">
                                             <div class="container inner">
-                                                <img src="/static/images/course6.jpg" class="card-img-top">
+                                                <img src="{% static 'images/course6.jpg'%}" class="card-img-top">
                                             </div>
                                             <div class="card-body">
                                                 <h4 class="card-title">Đào tạo đầu bếp chuyên nghiệp</h4>
@@ -481,7 +478,7 @@
 
 <div class="style-banner"></div>
 <div class="style-banner-container centered">
-    <img src="/static/images/stylebanner.png">
+    <img src="{% static 'images/stylebanner.png'%}">
     <div class="style-banner-content" style="color: #ffffff">
         <h3>Bạn chưa biết bắt đầu từ đâu?</h3>
         <p>Hãy trả lời những câu hỏi khảo sát để chúng tôi biết bạn cần gì</p>
@@ -509,7 +506,7 @@
                 <!--Card Item -->
                 <div class="item">
                     <div class="card">
-                        <img alt="" class="card-img-top" src="/static/images/giasu1.jpg">
+                        <img alt="" class="card-img-top" src="{% static 'images/giasu1.jpg'%}">
                         <div class="card-body">
                             <h7 class="card-title">Gia sư 1</h7>
                             <br>
@@ -527,7 +524,7 @@
                 <!--Card Item -->
                 <div class="item">
                     <div class="card">
-                        <img alt="" class="card-img-top" src="/static/images/giasu2.jpg">
+                        <img alt="" class="card-img-top" src="{% static 'images/giasu2.jpg'%}">
                         <div class="card-body">
                             <h7 class="card-title">Gia sư 2</h7>
                             <br>
@@ -545,7 +542,7 @@
                 <!--Card Item -->
                 <div class="item">
                     <div class="card">
-                        <img alt="" class="card-img-top" src="/static/images/giasu3.jpg">
+                        <img alt="" class="card-img-top" src="{% static 'images/giasu3.jpg'%}">
                         <div class="card-body">
                             <h7 class="card-title">Gia sư 3</h7>
                             <br>
@@ -563,7 +560,7 @@
                 <!-- Card Item -->
                 <div class="item">
                     <div class="card">
-                        <img alt="" class="card-img-top" src="/static/images/giasu1.jpg">
+                        <img alt="" class="card-img-top" src="{% static 'images/giasu1.jpg'%}">
                         <div class="card-body">
                             <h7 class="card-title">Gia sư 4</h7>
                             <br>
@@ -581,7 +578,7 @@
                 <!-- Card Item -->
                 <div class="item">
                     <div class="card">
-                        <img alt="" class="card-img-top" src="/static/images/giasu2.jpg">
+                        <img alt="" class="card-img-top" src="{% static 'images/giasu2.jpg'%}">
                         <div class="card-body">
                             <h7 class="card-title">Gia sư 5</h7>
                             <br>
@@ -599,7 +596,7 @@
                 <!-- Card Item -->
                 <div class="item">
                     <div class="card">
-                        <img alt="" class="card-img-top" src="/static/images/giasu3.jpg">
+                        <img alt="" class="card-img-top" src="{% static 'images/giasu3.jpg'%}">
                         <div class="card-body">
                             <h7 class="card-title">Gia sư 6</h7>
                             <br>
@@ -617,7 +614,7 @@
                 <!-- Card Item -->
                 <div class="item">
                     <div class="card">
-                        <img alt="" class="card-img-top" src="/static/images/giasu1.jpg">
+                        <img alt="" class="card-img-top" src="{% static 'images/giasu1.jpg'%}">
                         <div class="card-body">
                             <h7 class="card-title">Gia sư 7</h7>
                             <br>
@@ -635,7 +632,7 @@
                 <!-- Card Item -->
                 <div class="item">
                     <div class="card">
-                        <img alt="giasu" class="img-fluid" src="/static/images/giasu2.jpg">
+                        <img alt="giasu" class="img-fluid" src="{% static 'images/giasu2.jpg'%}">
                         <div class="card-body">
                             <h7 class="card-title">Gia sư 8</h7>
                             <br>
@@ -653,7 +650,7 @@
                 <!-- Card Item -->
                 <div class="item">
                     <div class="card">
-                        <img alt="" class="card-img-top" src="/static/images/giasu3.jpg">
+                        <img alt="" class="card-img-top" src="{% static 'images/giasu3.jpg'%}">
                         <div class="card-body">
                             <h7 class="card-title">Gia sư 9</h7>
                             <br>
@@ -671,7 +668,7 @@
                 <!-- Card Item-->
                 <div class="item">
                     <div class="card">
-                        <img alt="" class="card-img-top" src="/static/images/giasu2.jpg">
+                        <img alt="" class="card-img-top" src="{% static 'images/giasu2.jpg'%}">
                         <div class="card-body">
                             <h7 class="card-title">Gia sư 10</h7>
                             <br>
@@ -707,10 +704,10 @@
             <div class="row">
 
                 <!-- Image -->
-                <div class="col-md-4 academy"><a href="/static/images/trungtam1.jpg" data-toggle="lightbox"
+                <div class="col-md-4 academy"><a href="{% static 'images/trungtam1.jpg'%}" data-toggle="lightbox"
                                                  data-gallery="img-gallery" data-title="Anh văn hội Việt Mỹ"
                                                  data-footer="Trung tâm Anh văn Việt - Mỹ cam kết cải thiện tiếng Anh cho bé.">
-                    <img alt="" src="/static/images/trungtam1.jpg" class="img-fluid img-thumbnail"></a>
+                    <img alt="" src="{% static 'images/trungtam1.jpg'%}" class="img-fluid img-thumbnail"></a>
                     <a href="">
                         <figcaption class="figure-caption bg-original text-center py-2 mb-3">Anh văn hội Việt Mỹ
                         </figcaption>
@@ -718,10 +715,10 @@
                 </div>
 
                 <!-- Image -->
-                <div class="col-md-4 academy"><a href="/static/images/trungtam2.jpg" data-toggle="lightbox"
+                <div class="col-md-4 academy"><a href="{% static 'images/trungtam2.jpg'%}" data-toggle="lightbox"
                                                  data-gallery="img-gallery" data-title="Trung tâm tiếng Nhật - Hàn"
                                                  data-footer="Trung tâm tiếng Nhật - Hàn với mục tiêu xuất khẩu lao động.">
-                    <img alt="" src="/static/images/trungtam2.jpg" class="img-fluid img-thumbnail"></a>
+                    <img alt="" src="{% static 'images/trungtam2.jpg'%}" class="img-fluid img-thumbnail"></a>
                     <a href="">
                         <figcaption class="figure-caption bg-original text-center py-2 mb-3">Trung tâm tiếng Nhật -
                             Hàn
@@ -730,10 +727,10 @@
                 </div>
 
                 <!-- Image -->
-                <div class="col-md-4 academy"><a href="/static/images/trungtam3.jpg" data-toggle="lightbox"
+                <div class="col-md-4 academy"><a href="{% static 'images/trungtam3.jpg'%}" data-toggle="lightbox"
                                                  data-gallery="img-gallery" data-title="Trung tâm Anh ngữ ila"
                                                  data-footer="Trung tâm học tiếng Anh hàng đầu Việt Nam.">
-                    <img alt="" src="/static/images/trungtam3.jpg" class="img-fluid img-thumbnail"></a>
+                    <img alt="" src="{% static 'images/trungtam3.jpg'%}" class="img-fluid img-thumbnail"></a>
                     <a href="">
                         <figcaption class="figure-caption bg-original text-center py-2 mb-3">Trung tâm Anh ngữ ila
                         </figcaption>
@@ -763,7 +760,7 @@
                 <!-- Profile Content -->
                 <div class="col-md-4">
                     <div class="profile">
-                        <img src="/static/images/testimonials1.jpg" class="user">
+                        <img src="{% static 'images/testimonials1.jpg'%}" class="user">
                         <blockquote>Trang Web này rất tuyệt vời! Tôi đã tìm được một gia sư vừa ý. Tôi rất hài lòng!
                         </blockquote>
                         <h3>Nguyễn Trung Sơn <span>Cử nhân</span></h3>
@@ -773,7 +770,7 @@
                 <!-- Profile Content -->
                 <div class="col-md-4">
                     <div class="profile">
-                        <img src="/static/images/testimonials2.jpg" class="user">
+                        <img src="{% static 'images/testimonials2.jpg'%}" class="user">
                         <blockquote>Nhờ trang Web này tôi ngày càng tiến gần với giấc mơ trở thành một Web Developer
                             chuyên nghiệp, cảm ơn rất nhiều!
                         </blockquote>
@@ -784,7 +781,7 @@
                 <!-- Profile Content -->
                 <div class="col-md-4">
                     <div class="profile">
-                        <img src="/static/images/testimonials3.jpg" class="user">
+                        <img src="{% static 'images/testimonials3.jpg'%}" class="user">
                         <blockquote>Nếu bạn là một người yêu thích việc học, bạn sẽ không bao giờ bỏ qua trang Web
                             này.
                         </blockquote>
@@ -798,27 +795,6 @@
     <!-- END OF Testimonials Section -->
 
     <!-- BEGIN OF Social Network -->
-    <section class="container pt-3 text-center">
-        <div class="row">
-            <div class="col-lg-12">
-                <h1>Bạn cũng có thể tìm thấy chúng tôi tại</h1>
-            </div>
-        </div>
-    </section>
-
-    <!-- Icon -->
-    <div class="container-fluid">
-        <div class="row justify-content-center">
-            <a class="social-btn" href=""><i class="fab fa-facebook-f"></i></a>
-            <a class="social-btn" href=""><i class="fab fa-twitter"></i></a>
-            <a class="social-btn" href=""><i class="fab fa-google"></i></a>
-            <a class="social-btn" href=""><i class="fab fa-instagram"></i></a>
-            <a class="social-btn" href=""><i class="fab fa-youtube"></i></a>
-        </div>
-    </div>
-
-    <!-- END OF Social Network -->
-
     <!--END OF Layout Body - Content of the Website-->
 </section>
 
@@ -827,19 +803,108 @@
 
 <!-- BEGIN OF FOOTER -->
 <footer>
-    <div class="footy-sec mn no-margin">
+    <div style="background-color: #fff;">
+        <section class="container pt-3 text-center">
+            <div class="row">
+                <div class="col-lg-12">
+                    <p>Cộng đồng hơn 15,000 thành viên đang chờ bạn</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Icon -->
+        <div class="container-fluid">
+            <div class="row justify-content-center text-center">
+                <a class="social-btn" href=""><img src="{% static 'images/facebook.png'%}"></a>
+                <a class="social-btn" href=""><img src="{% static 'images/twitter.png'%}"></a>
+                <a class="social-btn" href=""><img src="{% static 'images/google-plus.png'%}"></a>
+                <a class="social-btn" href=""><img src="{% static 'images/youtube.png'%}"></a>
+                <a class="social-btn" href=""><img src="{% static 'images/zalo.png'%}"></a>
+            </div>
+        </div>
+        <!-- END OF Social Network -->
+    </div>
+
+    <div class="footer-main-category">
         <div class="container">
-            <ul>
-                <li><a href="#" title="">Trung tâm hỗ trợ</a></li>
-                <li><a href="#" title="">Chính sách bảo mật</a></li>
-                <li><a href="#" title="">Hướng dẫn chung</a></li>
-                <li><a href="#" title="">Chính sách bộ nhớ</a></li>
-                <li><a href="#" title="">Về chúng tôi</a></li>
-                <li><a href="#" title="">Diễn đàn</a></li>
-                <li><a href="#" title="">Giấy phép</a></li>
-            </ul>
-            <p><img src="/static/images/copy-icon2.png" alt="">Được cấp bản quyền năm 2017</p>
-            <img class="fl-rgt" src="/static/images/logo2.png" alt="">
+            <div class="row">
+                <div class="col-md-2 col-sm-6 col-xs-6">
+                    <div class="list-links">
+                        <h3>Bạn đang muốn</h3>
+                        <ul>
+                            <li><a href="/tao-lop-hoc">Đăng yêu cầu tìm gia sư</a></li>
+                            <li><a href="/teacher">Xem danh sách gia sư</a></li>
+                            <li><a href="https://www.giasuvip.vn" target="_blank">Dịch vụ gia sư VIP</a></li>
+                            <li><a href="/become-agency">Mở trung tâm GS<span style="color:yellow"> (hot)</span></a>
+                            </li>
+                            <li><a href="#recommendation" class="popup-modal">Góp ý cho chúng tôi</a></li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="col-md-2 col-sm-6 col-xs-6">
+                    <div class="list-links">
+                        <h3>Danh mục gia sư</h3>
+                        <ul>
+                            <li><a href="/gia-su-toan">Gia sư toán</a></li>
+                            <li><a href="/gia-su-tieng-anh">Gia sư Tiếng Anh</a></li>
+                            <li><a href="/gia-su-online">Gia sư Online</a></li>
+                            <li><a href="/gia-su-ngoai-ngu">Gia sư ngoại ngữ</a></li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="col-md-2 col-sm-6 col-xs-6">
+                    <div class="list-links">
+                        <h3>Chúng tôi</h3>
+                        <ul>
+                            <li><a href="/gioi-thieu">Về chúng tôi</a></li>
+                            <li><a href="/jobs">Tuyển dụng</a></li>
+                            <li><a href="/terms-of-use" rel="nofollow">Quy định MXH Chúng tôi</a></li>
+                            <li><a href="/quy-dinh-su-dung-san-giao-dich-tmdt" rel="nofollow">Quy định sàn TMĐT</a></li>
+                            <li><a href="/privacy-policy" rel="nofollow">CC bảo mật thông tin</a></li>
+                            <li><a href="/contact">Liên hệ</a></li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="col-md-2 col-sm-6 col-xs-6">
+                    <div class="list-links">
+                        <h3>Hỗ Trợ</h3>
+                        <ul>
+                            <li><a href="/support">Hướng dẫn sử dụng</a></li>
+                            <li><a href="/affiliate-program">Affiliate Program</a></li>
+                            <li><a href="/invite-friend">Mời bạn bè</a></li>
+                            <li><a href="/khieu-nai">Khiếu nại</a></li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="col-md-2 col-sm-6 col-xs-6">
+                    <div class="list-links">
+                        <h3>Dự án cộng đồng</h3>
+                        <ul>
+                            <li><a href="/cam-nang-tri-thuc">Cẩm nang tri thức</a></li>
+                            <li><a href="/kien-thuc-du-hoc">Kiến thức du học</a></li>
+                            <li><a href="/project-education-support">Gia sư miễn phí</a></li>
+                            <li><a href="/books-in-the-city">Sách truyền tay</a></li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="col-md-2 col-sm-6 col-xs-6">
+                    <div class="list-links">
+                        <h3>Dành Cho Gia sư</h3>
+                        <ul>
+                            <li><a href="/dang-ky-gia-su">Trở thành gia sư</a></li>
+                            <li><a href="/class">Danh sách lớp mới</a></li>
+                            <li><a href="/become-teacher">Hướng dẫn nhận lớp</a></li>
+                            <li><a href="/chinh-sach-phi" rel="nofollow">Chính sách phí</a></li>
+                        </ul>
+                    </div>
+                </div>
+
+            </div>
         </div>
     </div>
 </footer><!--footer end-->
@@ -848,10 +913,8 @@
 <!-- JAVASCRIPT -->
 <!-- Optional JavaScript -->
 <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-<script src="https://code.jquery.com/jquery-3.3.1.min.js"
-        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
-        crossorigin="anonymous"></script>
+<script src="{% static 'js/jquery.min.js'%}"></script>
+<script src="{% static 'js/jquery-3.3.1.min.js'%}"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"
         integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
         crossorigin="anonymous"></script>
@@ -870,6 +933,10 @@
          $('#regisModal').modal('hide');
         });
       });
+
+
+
+
 
 </script>
 
@@ -891,6 +958,9 @@
       });
 
 
+
+
+
 </script>
 
 <!-- Scrolling to TOP -->
@@ -910,10 +980,14 @@
         });
       });
 
+
+
+
+
 </script>
 
 <!-- Owl Carousel Script -->
-<script src="/static/js/owl.carousel.js"></script>
+<script src="{% static 'js/owl.carousel.js'%}"></script>
 <script>
         $('.owl-carousel').owlCarousel({
       loop:true,
@@ -934,6 +1008,9 @@
       }
   })
 
+
+
+
 </script>
 
 <!-- Ekko Lightbox (for Image Gallery) Script -->
@@ -943,6 +1020,9 @@
         event.preventDefault();
         $(this).ekkoLightbox();
       });
+
+
+
 
 </script>
 </body>

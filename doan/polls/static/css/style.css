@@ -113,8 +113,9 @@ input {
 textarea {
 	outline: none;
 }
+
 section {
-	float: left;
+    text-align: center;
 	width: 100%;
 	position: relative;
 }
@@ -176,15 +177,8 @@ nav ul li:hover > ul {
 
 
 /* ============== DEFAULT BORDER RADIUS =========== */
-.style-banner{
-    background: linear-gradient(-45deg, #e0cb0d 0, #e44d3a 100%);
-    height: 50px;
-}
-
 .ask-question,
 .login_register ul li a,
-.search-bar form input,
-.search-bar form button,
 .search_form form input,
 .post-st ul li a,
 .post-bar,
@@ -343,42 +337,6 @@ header {
 	line-height: 40px;
 	padding: 0 20px;
 	font-weight: 600;
-}
-.search-bar.st2 {
-	float: right;
-}
-.search-bar {
-	float: left;
-	width: 280px;
-	margin-top: 9px;
-}
-.search-bar form {
-	float: left;
-	width: 100%;
-	position: relative;
-}
-.search-bar form input {
-	width: 100%;
-	background-color: #fff;
-	height: 38px;
-	color: #b2b2b2;
-	font-size: 12px;
-	border: 0;
-	padding: 0 10px;
-}
-.search-bar form button {
-	position: absolute;
-	top: 0;
-	right: 0;
-	background-color: #efefef;
-	width: 38px;
-	height: 100%;
-	border: 0;
-}
-.search-bar form button i {
-	color: #e44d3a;
-	font-size: 20px;
-	font-weight: bold;
 }
 
 nav {
@@ -2904,8 +2862,8 @@ footer {
 	margin-bottom: 10px;
 }
 .user-profile-ov p {
-	color: #686868;
-	font-size: 14px;
+	color: #212529;
+	font-size: 16px;
 	line-height: 24px;
 	padding-bottom: 10px;
 }
@@ -2999,9 +2957,6 @@ footer {
 	width: 100%;
 	height: 174px;
 	object-fit: cover;
-}
-.row {
-	margin: 0;
 }
 .gallery_pt > a {
 	position: absolute;
@@ -3429,6 +3384,7 @@ a:hover {
 	padding: 0 12px;
 }
 .cc-head {
+    padding-left: 10px;
 	float: left;
 	width: 100%;
 	margin-bottom: 10px;
@@ -3459,7 +3415,10 @@ a:hover {
 .no-pdd {
 	padding: 0;
 }
-.inpt-field.pd-moree input {padding-left: 40px !important;}
+.inpt-field.pd-moree input {
+    padding-left: 40px !important;
+}
+
 .inpt-field i {
 	color: #b2b2b2;
 	font-size: 18px;
