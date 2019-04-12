@@ -69,3 +69,7 @@
 .container-fluid{
     padding-bottom: 30px;
 }
+
+.card-body{
+    height: 210px;
+}
