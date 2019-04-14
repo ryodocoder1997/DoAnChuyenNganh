@@ -28,5 +28,7 @@ urlpatterns = [
     path('tutorlist', TemplateView.as_view(template_name='tutorList.html')),
     path('courselist', TemplateView.as_view(template_name='courseList.html')),
     path('academylist', TemplateView.as_view(template_name='academyList.html')),
+    path('termofuses', TemplateView.as_view(template_name='term-of-uses.html')),
+    path('navuser', TemplateView.as_view(template_name='header-user-profile.html')),
 
 ]
